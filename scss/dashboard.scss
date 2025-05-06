@@ -1,0 +1,80 @@
+@import "media_advanced";
+@import "variables";
+@import "responsive_grid";
+@import "table";
+@import "table_col_width";
+@import "button";
+
+main {
+  margin: 16px 0px;
+
+  .container-fluid {
+    section {
+      background-color: $backgroundColor02;
+      padding: 16px;
+      box-shadow: $boxShadow01;
+    }
+
+    .dashboard-cards {
+      margin: -5px;
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+
+      .dashboard-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: $backgroundColor02;
+        box-shadow: $boxShadow01;
+        padding: 16px 32px;
+        text-align: center;
+
+        i {
+          font-size: 2rem;
+        }
+
+        .dashboard-card-title {
+          font-size: 1.5rem;
+          color: $textColor03;
+        }
+
+        .dashboard-card-value {
+          font-size: 2.5rem;
+          color: $textColor01;
+        }
+
+        .dashboard-card-separator {
+          opacity: 0.3;
+        }
+
+        .dashboard-card-link {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $textColor01;
+      margin-bottom: 16px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+
+      @include table();
+
+      .image-wrapper {
+        width: 80px;
+        height: 80px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

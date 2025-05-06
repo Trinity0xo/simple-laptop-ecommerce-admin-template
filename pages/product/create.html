@@ -1,0 +1,428 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product - ShopLap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../dist/css/reset.css" />
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+    <link rel="stylesheet" href="../../dist/css/layout.css" />
+    <link rel="stylesheet" href="../../dist/css/product.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <!-- overlay -->
+      <div class="overlay"></div>
+
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="logo">ShopLap</h1>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="../brand/index.html"
+              ><i class="fa-solid fa-layer-group"></i>Brand</a
+            >
+          </li>
+          <li>
+            <a href="../product/index.html"
+              ><i class="fa-solid fa-cubes"></i>Product</a
+            >
+          </li>
+          <li>
+            <a href="../category/index.html"
+              ><i class="fa-solid fa-layer-group"></i>Category</a
+            >
+          </li>
+          <li>
+            <a href="../order/index.html"
+              ><i class="fa-solid fa-cart-shopping"></i>Order</a
+            >
+          </li>
+          <li>
+            <a href="../user/index.html"
+              ><i class="fa-solid fa-users"></i>User</a
+            >
+          </li>
+          <li>
+            <a href="../role/index.html"
+              ><i class="fa-solid fa-user-plus"></i>Role</a
+            >
+          </li>
+        </ul>
+        <form action="" class="logout-form">
+          <button type="submit" class="logout-button">Logout</button>
+        </form>
+      </div>
+
+      <!-- main content -->
+      <div class="main-content">
+        <!-- header -->
+        <header>
+          <div class="container-fluid">
+            <button id="btnSidebarToggle" class="sidebar-Toggle-button">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="account">
+              <div class="account-avatar">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT18iwsdCCbBfpa50-5BmNa_m_BX087_x1oWQ&s"
+                  alt="avatar"
+                />
+              </div>
+              <div class="account-info">
+                <p>Hoàng Hà</p>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- main -->
+        <main>
+          <div class="container-fluid">
+            <ul class="breadcrumb">
+              <li><a href="./dashboard.html">Dashboard</a></li>
+              <li><a href="./index.html">Product</a></li>
+              <li>Create</li>
+            </ul>
+
+            <div class="product-wrapper">
+              <h1 class="title">Create new product</h1>
+              <form action="" class="create-product-form">
+                <div class="info images">
+                  <h2 class="title">Images:</h2>
+                  <div class="input-group">
+                    <label for="images" class="image-add-new-button"
+                      >Images (JPG, PNG, JPEG, GIF, WebP):</label
+                    >
+                    <div class="images-input-group">
+                      <div class="images-upload-wrapper">
+                        <div class="images-preview"></div>
+                        <div class="images-upload-control">
+                          <label for="images" class="image-add-new-button"
+                            ><i class="fa-solid fa-plus"></i
+                          ></label>
+                          <input
+                            class="images-upload"
+                            name="images"
+                            id="images"
+                            type="file"
+                            multiple
+                            accept="image/jpg, image/png, image/jpeg, image/gif, image/webp"
+                          />
+                        </div>
+                      </div>
+                      <span id="imagesError" class="error-message"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="info genaral-info">
+                  <h2 class="title">General Information:</h2>
+                  <div class="input-group">
+                    <label for="name">Name: </label>
+                    <div class="input-group-control">
+                      <input
+                        class="name"
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name"
+                        required
+                      />
+                      <span id="nameError" class="error-message"></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="brand">Brand: </label>
+                    <div class="input-group-control">
+                      <select name="brand" id="brand">
+                        <option selected>Select brand</option>
+                        <option value="1">Apple</option>
+                        <option value="2">Asus</option>
+                        <option value="3">Acer</option>
+                        <option value="4">Lenovo</option>
+                      </select>
+                      <span id="brandError" class="error-message"></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="category">Category: </label>
+                    <div class="input-group-control">
+                      <select name="category" id="category">
+                        <option selected>Select category</option>
+                        <option value="1">MacBook</option>
+                        <option value="2">NoteBook</option>
+                        <option value="3">Gaming Laptop</option>
+                        <option value="4">Mobile Workstation</option>
+                      </select>
+                      <span id="categoryError" class="error-message"></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="shortDescription">Short description: </label>
+                    <div class="input-group-control">
+                      <textarea
+                        name="shortDescription"
+                        id="shortDescription"
+                        rows="3"
+                        placeholder="Short description"
+                        required
+                      ></textarea>
+                      <span
+                        id="shortDescriptionError"
+                        class="error-message"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="description">Description: </label>
+                    <div class="input-group-control">
+                      <textarea
+                        name="description"
+                        id="description"
+                        rows="5"
+                        placeholder="Description"
+                        required
+                      ></textarea>
+                      <span id="descriptionError" class="error-message"></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="price">Price: </label>
+                    <div class="input-group-control">
+                      <input
+                        type="text"
+                        name="price"
+                        id="price"
+                        placeholder="Price"
+                        required
+                      />
+                      <span id="priceError" class="error-message"></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="discount">Discount(%): </label>
+                    <div class="input-group-control">
+                      <input
+                        type="text"
+                        name="discount"
+                        id="discount"
+                        placeholder="Discount"
+                        required
+                      />
+                      <span id="quantityError" class="error-message"></span>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="quantity">Quantity: </label>
+                    <div class="input-group-control">
+                      <input
+                        type="number"
+                        name="quantity"
+                        id="quantity"
+                        value="0"
+                        required
+                      />
+                      <span id="quantityError" class="error-message"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="info spec-info">
+                  <h2 class="title">Specification:</h2>
+                  <div class="input-group">
+                    <label for="cpu">Cpu: </label>
+                    <input
+                      type="text"
+                      name="cpu"
+                      id="cpu"
+                      placeholder="Cpu"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="ram">Ram: </label>
+                    <input
+                      type="text"
+                      name="ram"
+                      id="ram"
+                      placeholder="Ram"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="storage">Storage: </label>
+                    <input
+                      type="text"
+                      name="storage"
+                      id="storage"
+                      placeholder="Storage"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="graphics">Graphics: </label>
+                    <input
+                      type="text"
+                      name="graphics"
+                      id="graphics"
+                      placeholder="Graphics"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="screen">Screen: </label>
+                    <input
+                      type="text"
+                      name="screen"
+                      id="screen"
+                      placeholder="Screen"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="io">I/O: </label>
+                    <input
+                      type="text"
+                      name="io"
+                      id="io"
+                      placeholder="I/O"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="keyboard">Keyboard: </label>
+                    <input
+                      type="text"
+                      name="keyboard"
+                      id="keyboard"
+                      placeholder="Keyboard"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="screen">Webcam: </label>
+                    <input
+                      type="text"
+                      name="webcam"
+                      id="webcam"
+                      placeholder="Webcam"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="audio">Audio: </label>
+                    <input
+                      type="text"
+                      name="audio"
+                      id="audio"
+                      placeholder="Audio"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="connection">Connection: </label>
+                    <input
+                      type="text"
+                      name="connection"
+                      id="connection"
+                      placeholder="Connection"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="battery">Battery: </label>
+                    <input
+                      type="text"
+                      name="battery"
+                      id="battery"
+                      placeholder="Battery"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="os">OS: </label>
+                    <input
+                      type="text"
+                      name="os"
+                      id="os"
+                      placeholder="OS"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="weight">Weight: </label>
+                    <input
+                      type="text"
+                      name="weight"
+                      id="weight"
+                      placeholder="Weight"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="color">Color: </label>
+                    <input
+                      type="text"
+                      name="color"
+                      id="color"
+                      placeholder="Color"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="size">Size: </label>
+                    <input
+                      type="text"
+                      name="size"
+                      id="size"
+                      placeholder="Size"
+                      required
+                    />
+                  </div>
+                </div> -->
+                <div class="actions">
+                  <div class="empty"></div>
+                  <button type="submit" class="save-button">Save</button>
+                  <a href="./index.html" class="back-button">Back</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+          <div class="container-fluid">
+            <p>
+              Copyright &copy; 2025 ShopLap. Design by
+              <a href="#">Trinity0xo</a> All rights reserved
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="../../scripts/main.js"></script>
+  <script src="../../scripts/product.js"></script>
+</html>

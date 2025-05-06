@@ -1,0 +1,12 @@
+@import "variables";
+
+$cols: 12;
+$maxWidth: 1500px;
+
+.table-row {
+  @for $i from 1 through $cols {
+    .col-width-#{$i} {
+      min-width: ($maxWidth / $cols) * $i;
+    }
+  }
+}

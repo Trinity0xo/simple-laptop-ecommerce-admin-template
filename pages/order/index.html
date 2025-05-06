@@ -1,0 +1,353 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order - ShopLap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../dist/css/reset.css" />
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+    <link rel="stylesheet" href="../../dist/css/layout.css" />
+    <link rel="stylesheet" href="../../dist/css/order.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <!-- overlay -->
+      <div class="overlay"></div>
+
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="logo">ShopLap</h1>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="../brand/index.html"
+              ><i class="fa-solid fa-layer-group"></i>Brand</a
+            >
+          </li>
+          <li>
+            <a href="../product/index.html"
+              ><i class="fa-solid fa-cubes"></i>Product</a
+            >
+          </li>
+          <li>
+            <a href="../category/index.html"
+              ><i class="fa-solid fa-layer-group"></i>Category</a
+            >
+          </li>
+          <li>
+            <a href="../order/index.html"
+              ><i class="fa-solid fa-cart-shopping"></i>Order</a
+            >
+          </li>
+          <li>
+            <a href="../user/index.html"
+              ><i class="fa-solid fa-users"></i>User</a
+            >
+          </li>
+          <li>
+            <a href="../role/index.html"
+              ><i class="fa-solid fa-user-plus"></i>Role</a
+            >
+          </li>
+        </ul>
+        <form action="" class="logout-form">
+          <button type="submit" class="logout-button">Logout</button>
+        </form>
+      </div>
+
+      <!-- main content -->
+      <div class="main-content">
+        <!-- header -->
+        <header>
+          <div class="container-fluid">
+            <button id="btnSidebarToggle" class="sidebar-Toggle-button">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="account">
+              <div class="account-avatar">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT18iwsdCCbBfpa50-5BmNa_m_BX087_x1oWQ&s"
+                  alt="avatar"
+                />
+              </div>
+              <div class="account-info">
+                <p>Hoàng Hà</p>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- main -->
+        <main>
+          <div class="container-fluid">
+            <ul class="breadcrumb">
+              <li><a href="./dashboard.html">Dashboard</a></li>
+              <li>Order</li>
+            </ul>
+
+            <div class="order-wrapper">
+              <h1 class="title">Order</h1>
+
+              <div class="header">
+                <div class="filters-wrapper">
+                  <div class="popover filter">
+                    <button
+                      id="btnFilterToggle"
+                      class="filter-toggle popover-toggle"
+                    >
+                      <i class="fa-solid fa-filter"></i>
+                      Filter
+                      <span class="filter-number">3</span>
+                    </button>
+                    <div class="popover-menu filter-menu">
+                      <div class="popover-pointer"></div>
+                      <div class="header">
+                        <h2 class="title">Filter menu</h2>
+                        <button class="close-filter-button">
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+
+                      <div class="body">
+                        <div class="body">
+                          <h3 class="filter-title">Payment methods:</h3>
+                          <div class="filter-section">
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Momo"
+                                name="paymentMethod"
+                                value="MOMO"
+                              />
+                              <label for="Momo">Momo</label>
+                            </div>
+
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="COD"
+                                name="paymentMethod"
+                                value="COD"
+                              />
+                              <label for="COD">COD</label>
+                            </div>
+
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Vnpay"
+                                name="paymentMethod"
+                                value="VNPAY"
+                              />
+                              <label for="Vnpay">Vnpay</label>
+                            </div>
+                          </div>
+
+                          <h3 class="filter-title">Total price:</h3>
+                          <div class="filter-section">
+                            <input
+                              type="number"
+                              name="minPrice"
+                              id="minPrice"
+                              placeholder="Min price"
+                            />
+                            <input
+                              type="number"
+                              name="maxPrice"
+                              id="maxPrice"
+                              placeholder="Max price"
+                            />
+                          </div>
+
+                          <h3 class="filter-title">Status:</h3>
+                          <div class="filter-section">
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Pending"
+                                name="quantity"
+                                value="PENDING"
+                              />
+                              <label for="Pending">Pending</label>
+                            </div>
+
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Confirm"
+                                name="quantity"
+                                value="CONFIRM"
+                              />
+                              <label for="Confirm">Confirm</label>
+                            </div>
+
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Shipping"
+                                name="quantity"
+                                value="SHIPPING"
+                              />
+                              <label for="Shipping">Shipping</label>
+                            </div>
+
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Delivered"
+                                name="quantity"
+                                value="DELIVERED"
+                              />
+                              <label for="Delivered">Delivered</label>
+                            </div>
+
+                            <div class="filter-option">
+                              <input
+                                type="checkbox"
+                                id="Cancelled"
+                                name="quantity"
+                                value="CANCELLED"
+                              />
+                              <label for="Cancelled">Cancelled</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="footer">
+                        <a href="#" class="reset-button">Reset</a>
+                        <button class="apply-button">Apply</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="limit">
+                    <label for="limit">Limit: </label>
+                    <select class="limit-select" name="limit" id="limitSelect">
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="40">40</option>
+                      <option value="80">80</option>
+                    </select>
+                  </div>
+                  <div class="search">
+                    <input
+                      class="search-box"
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Search here..."
+                    />
+                    <button class="search-button">Search</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search-result-wrapper">
+                <p class="search-result-message">
+                  <span class="result-count">0</span> results for "
+                  <span class="result-query">Order 01</span>"
+                </p>
+                <a href="#" class="search-result-reset">reset</a>
+              </div>
+
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr class="table-row">
+                      <th class="col-width-1">Date</th>
+                      <th class="col-width-1">ID</th>
+                      <th class="col-width-3">Email</th>
+                      <th class="col-width-2">Total</th>
+                      <th class="col-width-2">Payment method</th>
+                      <th class="col-width-2">Status</th>
+                      <th class="col-width-1"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span>2025-04-12</span>
+                      </td>
+                      <td>
+                        <span>#ORD001</span>
+                      </td>
+                      <td>
+                        <span>john.doe@example.com</span>
+                      </td>
+                      <td>
+                        <span>$120.00</span>
+                      </td>
+                      <td>
+                        <span>Credit Card</span>
+                      </td>
+                      <td>
+                        <span class="order-status pendding-status"
+                          >PENDING</span
+                        >
+                      </td>
+                      <td>
+                        <div class="actions">
+                          <a class="view-button" href="./details.html">View</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul class="pagination">
+                <li>
+                  <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                </li>
+                <li>
+                  <a href="#" class="active">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+          <div class="container-fluid">
+            <p>
+              Copyright &copy; 2025 ShopLap. Design by
+              <a href="#">Trinity0xo</a> All rights reserved
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="../../scripts/main.js"></script>
+</html>

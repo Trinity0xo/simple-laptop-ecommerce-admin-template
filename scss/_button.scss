@@ -1,0 +1,20 @@
+@import "variables";
+
+@mixin button(
+  $backgroundColor: $primaryColor,
+  $textColor: $textColor02,
+  $display: inline-block,
+  $padding: 8px 16px,
+  $fontSize: 1.5rem,
+  $textAlign: center
+) {
+  display: $display;
+  background-color: $backgroundColor;
+  color: $textColor;
+  padding: $padding;
+  font-size: $fontSize;
+  text-align: $textAlign;
+  cursor: pointer;
+
+  @content;
+}

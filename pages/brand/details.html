@@ -1,0 +1,168 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand - ShopLap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../dist/css/reset.css" />
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+    <link rel="stylesheet" href="../../dist/css/layout.css" />
+    <link rel="stylesheet" href="../../dist/css/brand.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <!-- overlay -->
+      <div class="overlay"></div>
+
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="logo">ShopLap</h1>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="../brand/index.html"
+              ><i class="fa-solid fa-layer-group"></i>Brand</a
+            >
+          </li>
+          <li>
+            <a href="../product/index.html"
+              ><i class="fa-solid fa-cubes"></i>Product</a
+            >
+          </li>
+          <li>
+            <a href="../category/index.html"
+              ><i class="fa-solid fa-layer-group"></i>Category</a
+            >
+          </li>
+          <li>
+            <a href="../order/index.html"
+              ><i class="fa-solid fa-cart-shopping"></i>Order</a
+            >
+          </li>
+          <li>
+            <a href="../user/index.html"
+              ><i class="fa-solid fa-users"></i>User</a
+            >
+          </li>
+          <li>
+            <a href="../role/index.html"
+              ><i class="fa-solid fa-user-plus"></i>Role</a
+            >
+          </li>
+        </ul>
+        <form action="" class="logout-form">
+          <button type="submit" class="logout-button">Logout</button>
+        </form>
+      </div>
+
+      <!-- main content -->
+      <div class="main-content">
+        <!-- header -->
+        <header>
+          <div class="container-fluid">
+            <button id="btnSidebarToggle" class="sidebar-toggle-button">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="account">
+              <div class="account-avatar">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT18iwsdCCbBfpa50-5BmNa_m_BX087_x1oWQ&s"
+                  alt="avatar"
+                />
+              </div>
+              <div class="account-info">
+                <p>Hoàng Hà</p>
+                <p>Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- main -->
+        <main>
+          <div class="container-fluid">
+            <ul class="breadcrumb">
+              <li><a href="./dashboard.html">Dashboard</a></li>
+              <li><a href="./index.html">Brand</a></li>
+              <li>Details</li>
+            </ul>
+
+            <div class="brand-wrapper">
+              <h1 class="title">Brand #1</h1>
+
+              <div class="description-list-wrapper">
+                <dl class="row">
+                  <dt class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    ID:
+                  </dt>
+                  <dd class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    1
+                  </dd>
+                  <dt class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    Name:
+                  </dt>
+                  <dd class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    Brand 01
+                  </dd>
+                  <dt class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    Description:
+                  </dt>
+                  <dd class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    Random brand description
+                  </dd>
+                  <dt class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    Created at:
+                  </dt>
+                  <dd class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    30/4/2025
+                  </dd>
+                  <dt class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    Updated at:
+                  </dt>
+                  <dd class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                    30/4/2025
+                  </dd>
+                </dl>
+                <div class="actions">
+                  <a href="./edit.html" class="edit-button">Edit</a>
+                  <a href="./index.html" class="back-button">Back</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+          <div class="container-fluid">
+            <p>
+              Copyright &copy; 2025 ShopLap. Design by
+              <a href="#">Trinity0xo</a> All rights reserved
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="../../scripts/main.js"></script>
+</html>
