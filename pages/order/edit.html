@@ -95,6 +95,7 @@
         <!-- main -->
         <main>
           <div class="container-fluid">
+            <!-- breadcrumb -->
             <ul class="breadcrumb">
               <li><a href="./dashboard.html">Dashboard</a></li>
               <li><a href="./index.html">Order</a></li>
@@ -103,20 +104,22 @@
 
             <div class="order-wrapper">
               <h1 class="title">Edit order #1</h1>
+
               <form action="" class="edit-order-form">
                 <div class="input-group">
                   <label for="orderStatus">Order status: </label>
                   <div class="input-group-control">
                     <select name="orderStatus" id="orderStatus">
-                      <option selected value="1">Pending</option>
-                      <option value="2">Confirmed</option>
-                      <option value="3">Cancelled</option>
-                      <option value="4">Delivered</option>
+                      <option selected value="PENDING">PENDING</option>
+                      <option value="CONFIRMED">CONFIRMED</option>
+                      <option value="SHIPPING">SHIPPING</option>
+                      <option value="DELIVERED">DELIVERED</option>
+                      <option value="CANCELLED">CANCELLED</option>
                     </select>
                     <span id="orderStatusError" class="error-message"></span>
                   </div>
                 </div>
-                <div class="input-group">
+                <div class="input-group cancelled-reason-input">
                   <label for="cancelledReason">Cancelled reason: </label>
                   <div class="input-group-control">
                     <textarea
@@ -154,11 +157,7 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="/libraries/jquery/jquery.js"></script>
   <script src="../../scripts/main.js"></script>
+  <script src="../../scripts/order.js"></script>
 </html>

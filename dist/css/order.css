@@ -454,6 +454,12 @@ main .container-fluid .order-wrapper form {
 main .container-fluid .order-wrapper form .input-group {
   display: flex;
 }
+main .container-fluid .order-wrapper form .input-group.cancelled-reason-input {
+  display: none;
+}
+main .container-fluid .order-wrapper form .input-group.cancelled-reason-input.show {
+  display: flex;
+}
 main .container-fluid .order-wrapper form .input-group .input-group-control {
   width: 100%;
 }

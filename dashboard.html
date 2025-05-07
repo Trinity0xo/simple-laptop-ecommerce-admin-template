@@ -95,14 +95,14 @@
         <!-- main -->
         <main>
           <div class="container-fluid">
-            <!-- <section class="dashboard-cards">
+            <section class="dashboard-cards">
               <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="dashboard-card">
                     <i class="fa-solid fa-cubes"></i>
                     <p class="dashboard-card-title">Products</p>
                     <h3 class="dashboard-card-value">1000</h3>
-                    <hr class="dashboard-card-separator" />
+                    <div class="divider"></div>
                     <a href="#" class="dashboard-card-link">View details</a>
                   </div>
                 </div>
@@ -111,7 +111,7 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                     <p class="dashboard-card-title">Orders</p>
                     <h3 class="dashboard-card-value">1000</h3>
-                    <hr class="dashboard-card-separator" />
+                    <div class="divider"></div>
                     <a href="#" class="dashboard-card-link">View details</a>
                   </div>
                 </div>
@@ -120,7 +120,7 @@
                     <i class="fa-solid fa-users"></i>
                     <p class="dashboard-card-title">Users</p>
                     <h3 class="dashboard-card-value">1000</h3>
-                    <hr class="dashboard-card-separator" />
+                    <div class="divider"></div>
                     <a href="#" class="dashboard-card-link">View details</a>
                   </div>
                 </div>
@@ -129,15 +129,31 @@
                     <i class="fa-solid fa-layer-group"></i>
                     <p class="dashboard-card-title">Categories</p>
                     <h3 class="dashboard-card-value">1000</h3>
-                    <hr class="dashboard-card-separator" />
+                    <div class="divider"></div>
                     <a href="#" class="dashboard-card-link">View details</a>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section class="top-products">
-              <h3>Top Products</h3>
+            <section class="top-sale-products">
+              <div class="header">
+                <h1 class="title">Top sale products</h1>
+
+                <div class="time-limit dropdown">
+                  <button class="time-limit-toggle dropdown-toggle">
+                    <i class="fa-solid fa-caret-down"></i>
+                    Time: <span class="time-limit-selected">3 month</span>
+                  </button>
+                  <ul class="time-limit-dropdown-menu dropdown-menu">
+                    <li><a href="#" data-sort="1">1 month</a></li>
+                    <li><a href="#" data-sort="3">3 months</a></li>
+                    <li><a href="#" data-sort="6">6 months</a></li>
+                    <li><a href="#" data-sort="12">12 months</a></li>
+                  </ul>
+                </div>
+              </div>
+
               <div class="table-wrapper">
                 <table>
                   <thead>
@@ -152,21 +168,23 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
+                      <td><span>1</span></td>
                       <td>
                         <div class="image-wrapper">
-                          <img src="./images/laptop01.jpeg" alt="" />
+                          <img
+                            src="./images/laptop01.jpeg"
+                            alt="product image"
+                          />
                         </div>
                       </td>
                       <td>
-                        <a href="#"
-                          >MacBook Pro 16 inch M3 Pro 2023 (18GB RAM| 18 core
-                          GPU| 512GB SSD)</a
-                        >
+                        <a href="#">
+                          <span>MacBook Pro 16 inch M3 Pro 2023</span>
+                        </a>
                       </td>
-                      <td>Laptop</td>
-                      <td>Apple</td>
-                      <td>63.490.000₫</td>
+                      <td><span>Macbook</span></td>
+                      <td><span>Apple</span></td>
+                      <td><span>32.490.000₫</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -174,7 +192,8 @@
             </section>
 
             <section class="recent-orders">
-              <h3>Recent orders</h3>
+              <h1 class="title">Recent orders</h1>
+
               <div class="table-wrapper">
                 <table>
                   <thead>
@@ -190,18 +209,32 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th>12/06/2022</th>
-                      <td>1</td>
-                      <td>manhha2392000@gmail.com</td>
-                      <td>63.490.000₫</td>
-                      <td>COD</td>
-                      <td>Pending</td>
-                      <td><a href="#">Details</a></td>
+                      <th>
+                        <span>12/06/2022</span>
+                      </th>
+                      <td><span>1</span></td>
+                      <td><span>manhha2392000@gmail.com</span></td>
+                      <td><span>63.490.000₫</span></td>
+                      <td><span>COD</span></td>
+                      <td>
+                        <span class="order-status pending-status">
+                          PENDING
+                        </span>
+                      </td>
+                      <td>
+                        <div class="actions">
+                          <a
+                            href="/pages/order/details.html"
+                            class="view-button"
+                            >View</a
+                          >
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </section> -->
+            </section>
           </div>
         </main>
 
@@ -217,11 +250,6 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="/libraries/jquery/jquery.js"></script>
   <script src="./scripts/main.js"></script>
 </html>

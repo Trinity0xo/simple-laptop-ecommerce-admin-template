@@ -95,6 +95,7 @@
         <!-- main -->
         <main>
           <div class="container-fluid">
+            <!-- breadcrumb -->
             <ul class="breadcrumb">
               <li><a href="./dashboard.html">Dashboard</a></li>
               <li>Role</li>
@@ -103,6 +104,7 @@
             <div class="role-wrapper">
               <h1 class="title">Role</h1>
 
+              <!-- header -->
               <div class="header">
                 <div class="filters-wrapper">
                   <div class="limit">
@@ -131,6 +133,7 @@
                 >
               </div>
 
+              <!-- search result -->
               <div class="search-result-wrapper">
                 <p class="search-result-message">
                   <span class="result-count">0</span> results for "
@@ -139,6 +142,7 @@
                 <a href="#" class="search-result-reset">reset</a>
               </div>
 
+              <!-- table -->
               <div class="table-wrapper">
                 <table>
                   <thead>
@@ -158,14 +162,17 @@
                       <td><span>Random description</span></td>
                       <td><span>15/02/2022</span></td>
                       <td><span>21/04/2022</span></td>
-                      <td class="actions">
-                        <a class="view-button" href="./details.html">View</a>
+                      <td>
+                        <div class="actions">
+                          <a class="view-button" href="./details.html">View</a>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
+              <!-- pagination -->
               <ul class="pagination">
                 <li>
                   <a href="#" class="previous"
@@ -200,11 +207,6 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="/libraries/jquery/jquery.js"></script>
   <script src="../../scripts/main.js"></script>
 </html>

@@ -330,6 +330,14 @@ main {
         .input-group {
           display: flex;
 
+          &.cancelled-reason-input {
+            display: none;
+
+            &.show {
+              display: flex;
+            }
+          }
+
           .input-group-control {
             width: 100%;
           }

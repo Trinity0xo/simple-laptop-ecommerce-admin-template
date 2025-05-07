@@ -95,6 +95,7 @@
         <!-- main -->
         <main>
           <div class="container-fluid">
+            <!-- breadcrumb -->
             <ul class="breadcrumb">
               <li><a href="./dashboard.html">Dashboard</a></li>
               <li><a href="./index.html">Product</a></li>
@@ -103,6 +104,7 @@
 
             <div class="product-wrapper">
               <h1 class="title">Edit product #1</h1>
+
               <form action="" class="edit-product-form">
                 <div class="info images">
                   <h2 class="title">Images:</h2>
@@ -141,6 +143,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="info genaral-info">
                   <h2 class="title">General Information:</h2>
                   <div class="input-group">
@@ -151,7 +154,7 @@
                         type="text"
                         name="name"
                         id="name"
-                        placeholder="Name"
+                        placeholder="Product name"
                         value="Product 01"
                         required
                       />
@@ -191,7 +194,7 @@
                         name="shortDescription"
                         id="shortDescription"
                         rows="3"
-                        placeholder="Short description"
+                        placeholder="Product short description"
                         required
                       >
 Random description</textarea
@@ -209,7 +212,7 @@ Random description</textarea
                         name="description"
                         id="description"
                         rows="5"
-                        placeholder="Description"
+                        placeholder="Product description"
                         required
                       >
 Random description</textarea
@@ -259,6 +262,7 @@ Random description</textarea
                     </div>
                   </div>
                 </div>
+
                 <div class="actions">
                   <div class="empty"></div>
                   <button type="submit" class="save-button">Save</button>
@@ -281,12 +285,7 @@ Random description</textarea
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="/libraries/jquery/jquery.js"></script>
   <script src="../../scripts/main.js"></script>
   <script src="../../scripts/product.js"></script>
 </html>

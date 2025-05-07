@@ -62,6 +62,23 @@ overlay.click(function () {
   body.css("overflow", "unset");
 });
 
+const dropDownToggle = $(".dropdown-toggle");
+const dropDownMenu = $(".dropdown-menu");
+
+dropDownToggle.click(function () {
+  dropDownMenu.not($(this).next()).hide();
+  $(this).next().toggle();
+});
+
+$(document).on("click", function (e) {
+  if (
+    !$(e.target).closest(".dropdown-menu").length &&
+    !$(e.target).closest(".dropdown-toggle").length
+  ) {
+    dropDownMenu.hide();
+  }
+});
+
 // popover toggle
 // $(btnFilterToggle).click(function () {
 //   filterMenu.toggleClass("show");

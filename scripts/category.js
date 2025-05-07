@@ -1,14 +1,10 @@
 const imageUpload = $(".image-upload");
 const imagePreview = $(".image-preview");
 const imageUploadControl = $(".image-upload-control");
-const imageUploadWrapper = $(".image-upload-wrapper");
-const imageError = $("#imageError");
-const imagePreviewItem = $(".image-preview-item");
 const allowedExtensions = ["jpg", "jpeg", "png", "gif", "webp"];
+const deleteImageName = $("#deleteImageName");
 
-let deleteImageName = "";
-
-if (imagePreviewItem.length > 0) {
+if ($(".image-preview-item").length > 0) {
   imageUploadControl.addClass("hide");
 }
 
@@ -29,18 +25,18 @@ imageUpload.change(function () {
   if (checkFileType(file, allowedExtensions)) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      const img = $("<img>");
+      const img = $("<img alt='category image'>");
       img.attr("src", e.target.result);
 
       const previewItem = $(`
-      <div class="image-preview-item">
-      </div>
-    `);
+          <div class="image-preview-item">
+          </div>
+        `);
 
       const imageEdit = $(
         `<label for="image" class="image-edit-button">
-        <i class="fa-solid fa-pen-to-square"></i>
-      </label>`
+                <i class="fa-solid fa-pen-to-square"></i>
+            </label>`
       );
 
       previewItem.append(img);
@@ -65,7 +61,8 @@ $(document).on("click", function (e) {
       const currentImageUrlArray = currentImageUrl.split("/");
       const currentImageName =
         currentImageUrlArray[currentImageUrlArray.length - 1];
-      deleteImageName = currentImageName;
+
+      deleteImageName.val(currentImageName);
     }
   }
 });

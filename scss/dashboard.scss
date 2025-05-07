@@ -4,77 +4,177 @@
 @import "table";
 @import "table_col_width";
 @import "button";
+@import "input";
 
 main {
-  margin: 16px 0px;
-
   .container-fluid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
     section {
       background-color: $backgroundColor02;
       padding: 16px;
       box-shadow: $boxShadow01;
-    }
 
-    .dashboard-cards {
-      margin: -5px;
-      background-color: transparent;
-      padding: 0;
-      box-shadow: none;
+      &.dashboard-cards {
+        margin: -5px;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
 
-      .dashboard-card {
+        .dashboard-card {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          background-color: $backgroundColor02;
+          box-shadow: $boxShadow01;
+          padding: 16px 32px;
+          text-align: center;
+
+          i {
+            font-size: 2rem;
+            color: $textColor01;
+          }
+
+          .dashboard-card-title {
+            font-size: 1.5rem;
+            color: $textColor01;
+          }
+
+          .dashboard-card-value {
+            font-size: 2.5rem;
+            color: $textColor01;
+          }
+
+          .dashboard-card-link {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      &.top-sale-products {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        background-color: $backgroundColor02;
-        box-shadow: $boxShadow01;
-        padding: 16px 32px;
-        text-align: center;
+        gap: 16px;
 
-        i {
+        .header {
+          display: flex;
+          gap: 16px;
+          justify-content: space-between;
+
+          @include media(xs, sm) {
+            flex-direction: column;
+            align-items: start;
+          }
+
+          @include media(md, lg, xl) {
+            flex-direction: row;
+            align-items: center;
+          }
+
+          .title {
+            font-size: 2rem;
+            color: $textColor01;
+          }
+
+          .time-limit {
+            .time-limit-toggle {
+              display: flex;
+              gap: 8px;
+              align-items: center;
+              font-size: 1.5rem;
+              color: $textColor01;
+              padding: 5px 10px;
+              cursor: pointer;
+
+              i {
+                font-size: 1.5rem;
+                color: $textColor01;
+              }
+
+              &:hover {
+                background-color: $primaryColor;
+                color: $textColor02;
+
+                i {
+                  color: $textColor02;
+                }
+              }
+            }
+          }
+        }
+
+        .table-wrapper {
+          overflow-x: auto;
+
+          table {
+            @include table() {
+              .image-wrapper {
+                width: 64px;
+                height: 64px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.recent-orders {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .title {
           font-size: 2rem;
-        }
-
-        .dashboard-card-title {
-          font-size: 1.5rem;
-          color: $textColor03;
-        }
-
-        .dashboard-card-value {
-          font-size: 2.5rem;
           color: $textColor01;
         }
 
-        .dashboard-card-separator {
-          opacity: 0.3;
-        }
+        .table-wrapper {
+          overflow-x: auto;
 
-        .dashboard-card-link {
-          font-size: 1.5rem;
-        }
-      }
-    }
+          table {
+            @include table() {
+              .actions {
+                display: flex;
+                gap: 8px;
 
-    h3 {
-      font-size: 2rem;
-      color: $textColor01;
-      margin-bottom: 16px;
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-
-      @include table();
-
-      .image-wrapper {
-        width: 80px;
-        height: 80px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
+                .view-button {
+                  @include button($backgroundColor: $successColor);
+                }
+              }
+            }
+          }
         }
       }
     }
+
+    // h3 {
+    //   font-size: 2rem;
+    //   color: $textColor01;
+    //   margin-bottom: 16px;
+    // }
+
+    // .table-wrapper {
+    //   overflow-x: auto;
+
+    //   @include table();
+
+    //   .image-wrapper {
+    //     width: 80px;
+    //     height: 80px;
+
+    //     img {
+    //       width: 100%;
+    //       height: 100%;
+    //       object-fit: contain;
+    //     }
+    //   }
+    // }
   }
 }

@@ -95,6 +95,7 @@
         <!-- main -->
         <main>
           <div class="container-fluid">
+            <!-- breadcrumb -->
             <ul class="breadcrumb">
               <li><a href="./dashboard.html">Dashboard</a></li>
               <li><a href="./index.html">Product</a></li>
@@ -131,6 +132,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="info genaral-info">
                   <h2 class="title">General Information:</h2>
                   <div class="input-group">
@@ -141,7 +143,7 @@
                         type="text"
                         name="name"
                         id="name"
-                        placeholder="Name"
+                        placeholder="Product name"
                         required
                       />
                       <span id="nameError" class="error-message"></span>
@@ -180,7 +182,7 @@
                         name="shortDescription"
                         id="shortDescription"
                         rows="3"
-                        placeholder="Short description"
+                        placeholder="Product short description"
                         required
                       ></textarea>
                       <span
@@ -196,7 +198,7 @@
                         name="description"
                         id="description"
                         rows="5"
-                        placeholder="Description"
+                        placeholder="Product description"
                         required
                       ></textarea>
                       <span id="descriptionError" class="error-message"></span>
@@ -206,10 +208,10 @@
                     <label for="price">Price: </label>
                     <div class="input-group-control">
                       <input
-                        type="text"
+                        type="number"
                         name="price"
                         id="price"
-                        placeholder="Price"
+                        value="0"
                         required
                       />
                       <span id="priceError" class="error-message"></span>
@@ -219,10 +221,11 @@
                     <label for="discount">Discount(%): </label>
                     <div class="input-group-control">
                       <input
-                        type="text"
+                        type="number"
                         name="discount"
                         id="discount"
                         placeholder="Discount"
+                        value="0"
                         required
                       />
                       <span id="quantityError" class="error-message"></span>
@@ -242,6 +245,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- <div class="info spec-info">
                   <h2 class="title">Specification:</h2>
                   <div class="input-group">
@@ -395,6 +399,7 @@
                     />
                   </div>
                 </div> -->
+
                 <div class="actions">
                   <div class="empty"></div>
                   <button type="submit" class="save-button">Save</button>
@@ -417,12 +422,7 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="/libraries/jquery/jquery.js"></script>
   <script src="../../scripts/main.js"></script>
   <script src="../../scripts/product.js"></script>
 </html>

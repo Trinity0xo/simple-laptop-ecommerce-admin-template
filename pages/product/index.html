@@ -95,6 +95,7 @@
         <!-- main -->
         <main>
           <div class="container-fluid">
+            <!-- breadcrumb -->
             <ul class="breadcrumb">
               <li><a href="../../dashboard.html">Dashboard</a></li>
               <li>Product</li>
@@ -103,6 +104,7 @@
             <div class="product-wrapper">
               <h1 class="title">Product</h1>
 
+              <!-- header -->
               <div class="header">
                 <div class="filters-wrapper">
                   <div class="popover filter">
@@ -114,6 +116,7 @@
                       Filter
                       <span class="filter-number">3</span>
                     </button>
+
                     <div class="popover-menu filter-menu">
                       <div class="popover-pointer"></div>
 
@@ -237,6 +240,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="limit">
                     <label for="limit">Limit: </label>
                     <select class="limit-select" name="limit" id="limitSelect">
@@ -246,6 +250,7 @@
                       <option value="80">80</option>
                     </select>
                   </div>
+
                   <div class="search">
                     <input
                       class="search-box"
@@ -257,11 +262,13 @@
                     <button class="search-button">Search</button>
                   </div>
                 </div>
+
                 <a class="create-new-button" href="./create.html">
                   <i class="fa-solid fa-plus"></i>Add
                 </a>
               </div>
 
+              <!-- search result -->
               <div class="search-result-wrapper">
                 <p class="search-result-message">
                   <span class="result-count">0</span> results for "
@@ -270,6 +277,7 @@
                 <a href="#" class="search-result-reset">reset</a>
               </div>
 
+              <!-- table -->
               <div class="table-wrapper">
                 <table>
                   <thead>
@@ -324,6 +332,7 @@
                 </table>
               </div>
 
+              <!-- pagination -->
               <ul class="pagination">
                 <li>
                   <a href="#" class="previous"
@@ -358,11 +367,6 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="/libraries/jquery/jquery.js"></script>
   <script src="../../scripts/main.js"></script>
 </html>

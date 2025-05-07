@@ -1,8 +1,5 @@
-// images upload
 const imagesUpload = $(".images-upload");
 const imagesPreview = $(".images-preview");
-const imagesUploadWrapper = $(".images-upload-wrapper");
-const imagesError = $("#imagesError");
 const allowedExtensions = ["jpg", "jpeg", "png", "gif", "webp"];
 
 let images = [];
@@ -29,31 +26,30 @@ imagesUpload.change(function () {
 
       const reader = new FileReader();
       reader.onload = function (e) {
-        const img = $("<img>");
+        const img = $("<img alt='product image'>");
         img.attr("src", e.target.result);
-        img.attr("alt", "product image");
 
-        const previewItem = $(`
-      <div class="images-preview-item">
-      </div>
-    `);
+        const imagesPreviewItem = $(`
+          <div class="images-preview-item">
+          </div>
+        `);
 
         const imageRemove = $(
           `<button type="button" class="image-remove-button" data-index="${index}">
-          <i class="fa-solid fa-xmark"></i>
-        </button>`
+              <i class="fa-solid fa-xmark"></i>
+            </button>`
         );
 
-        previewItem.append(img);
-        previewItem.append(imageRemove);
-        imagesPreview.append(previewItem);
+        imagesPreviewItem.append(img);
+        imagesPreviewItem.append(imageRemove);
+        imagesPreview.append(imagesPreviewItem);
       };
 
       reader.readAsDataURL(files[i]);
     }
   }
 
-  $(this).val();
+  $(this).val("");
 });
 
 $(document).on("click", function (e) {
@@ -65,7 +61,6 @@ $(document).on("click", function (e) {
       const currentImageUrlArray = currentImageUrl.split("/");
       const currentImageName =
         currentImageUrlArray[currentImageUrlArray.length - 1];
-
       deleteImageNames.push(currentImageName);
     }
 
@@ -78,10 +73,7 @@ $(document).on("click", function (e) {
     images.forEach((file) => dataTransfer.items.add(file));
     imagesUpload.files = dataTransfer.files;
 
-    const thisImagesPreviewItem = $(imageRemove).closest(
-      ".images-preview-item"
-    );
-
-    thisImagesPreviewItem.remove();
+    const imagesPreviewItem = $(imageRemove).closest(".images-preview-item");
+    imagesPreviewItem.remove();
   }
 });

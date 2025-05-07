@@ -21,6 +21,13 @@ body {
   min-height: 100vh;
 }
 
+// divider
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba($textColor01, 0.25);
+}
+
 // breadcrumb
 .breadcrumb {
   // margin-top: 16px;
@@ -164,4 +171,42 @@ body {
 .error-message {
   color: $dangerColor;
   font-size: 1.5rem;
+}
+
+// dropdown
+.dropdown {
+  position: relative;
+
+  .dropdown-menu {
+    display: none;
+    right: 0;
+    top: 100%;
+    transform: translateY(10px);
+    min-width: 160px;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: $boxShadow02;
+    background-color: $backgroundColor02;
+
+    li {
+      a {
+        display: inline-block;
+        padding: 8px 10px;
+        width: 100%;
+        color: $textColor01;
+        font-size: 1.5rem;
+        transition: 0.3s;
+
+        &:hover {
+          background: $primaryColor;
+          color: $textColor02;
+        }
+
+        &.active {
+          background: $primaryColor;
+          color: $textColor02;
+        }
+      }
+    }
+  }
 }
